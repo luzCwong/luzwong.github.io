@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luz C. Wong Naranjo · Especialista en Marketing Digital & IA Aplicada</title>
+<meta name="description" content="Especialista en Marketing Digital que construye con IA. Fundadora de ecosistema de 7 proyectos. Premio Mejor TFM UOC. Si yo pude, tú también puedes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --burdeos: #880E4F;
+  --burdeos-dark: #6D0B3A;
+  --rose: #D4537E;
+  --dorado: #F5A623;
+  --crema: #FFF8F0;
+  --verde: #2E7D32;
+  --negro: #111;
+  --gris: #555;
+  --gris-claro: #f7f4f0;
+  --borde: rgba(136,14,79,0.12);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fff;
+  color: var(--negro);
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--burdeos);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(212,83,126,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px 80px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--rose);
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-name span {
+  font-style: italic;
+  color: var(--dorado);
+}
+
+.hero-title {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+.hero-gancho {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-left: 3px solid var(--dorado);
+  padding: 18px 22px;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+.hero-gancho p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.hero-gancho strong {
+  color: var(--dorado);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--dorado);
+  color: var(--negro);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,0.4); }
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 13px 27px;
+  border: 1px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, background 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.06); }
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 80px 80px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 24px 20px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.stat-card:hover { background: rgba(255,255,255,0.12); }
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--dorado);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stat-card.featured {
+  grid-column: 1 / -1;
+  background: rgba(212,83,126,0.2);
+  border-color: rgba(212,83,126,0.4);
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 18px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+nav.scrolled {
+  background: var(--burdeos-dark);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: #fff; }
+
+/* ── SECTIONS ── */
+section { padding: 100px 80px; }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rose);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-label::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--rose);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--negro);
+  margin-bottom: 16px;
+}
+
+.section-title em { font-style: italic; color: var(--burdeos); }
+
+/* ── SOBRE MÍ ── */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.sobre-text p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.sobre-text p strong {
+  color: var(--negro);
+  font-weight: 500;
+}
+
+.sobre-highlight {
+  background: var(--crema);
+  border-left: 3px solid var(--burdeos);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.sobre-highlight p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--burdeos);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sobre-credenciales {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.credencial {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--borde);
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.credencial:hover {
+  border-color: var(--rose);
+  box-shadow: 0 4px 20px rgba(136,14,79,0.08);
+}
+
+.credencial-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--burdeos);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.credencial-info h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--negro);
+  margin-bottom: 3px;
+}
+
+.credencial-info p {
+  font-size: 12px;
+  color: var(--gris);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ── PROYECTOS ── */
+.proyectos-bg { background: var(--gris-claro); }
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.proyecto-card {
+  background: #fff;
+  border: 1px solid var(--borde);
+  padding: 28px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.proyecto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--burdeos);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.proyecto-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(136,14,79,0.1); }
+.proyecto-card:hover::before { transform: scaleX(1); }
+
+.proyecto-card.destacado {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--burdeos);
+  border-color: var(--burdeos);
+}
+
+.proyecto-card.destacado::before { background: var(--dorado); transform: scaleX(1); }
+
+.proyecto-sector {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 12px;
+}
+
+.proyecto-card.destacado .proyecto-sector { color: rgba(255,255,255,0.6); }
+
+.proyecto-nombre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--negro);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.proyecto-card.destacado .proyecto-nombre { color: #fff; font-size: 32px; }
+
+.proyecto-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.proyecto-card.destacado .proyecto-desc { color: rgba(255,255,255,0.7); }
+
+.proyecto-pill {
+  display: inline-block;
+  font-size: 10px;
+  padding: 4px 12px;
+  border: 1px solid;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.pill-live { border-color: var(--verde); color: var(--verde); }
+.pill-mvp { border-color: var(--dorado); color: var(--dorado); }
+.pill-dev { border-color: var(--rose); color: var(--rose); }
+
+.proyecto-card.destacado .pill-live { border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.8); }
+
+.proyecto-destacado-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.proyecto-destacado-right p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+
+.proyecto-destacado-right .pi-ref {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
+}
+
+/* ── SERVICIOS ── */
+.servicios-intro {
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+.servicios-intro p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--borde);
+}
+
+.servicio-card {
+  background: #fff;
+  padding: 40px 32px;
+  position: relative;
+}
+
+.servicio-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 400;
+  color: rgba(136,14,79,0.07);
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  line-height: 1;
+}
+
+.servicio-icono {
+  width: 48px;
+  height: 48px;
+  background: var(--crema);
+  border: 1px solid var(--borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.servicio-nombre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--negro);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.servicio-para {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 14px;
+}
+
+.servicio-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.servicio-precio {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.precio-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--burdeos);
+  line-height: 1;
+}
+
+.precio-suffix {
+  font-size: 12px;
+  color: var(--gris);
+}
+
+.servicio-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.servicio-lista li {
+  font-size: 12px;
+  color: var(--gris);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.servicio-lista li::before {
+  content: '→';
+  color: var(--burdeos);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.btn-servicio {
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-s-main {
+  background: var(--burdeos);
+  color: #fff;
+}
+
+.btn-s-main:hover { background: var(--burdeos-dark); }
+
+.btn-s-outline {
+  border: 1px solid var(--burdeos);
+  color: var(--burdeos);
+  background: transparent;
+}
+
+.btn-s-outline:hover { background: var(--burdeos); color: #fff; }
+
+/* ── CONTACTO ── */
+.contacto-bg { background: var(--burdeos); }
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contacto-left .section-label { color: var(--dorado); }
+.contacto-left .section-label::before { background: var(--dorado); }
+.contacto-left .section-title { color: #fff; }
+
+.contacto-left p {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.contacto-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contacto-dato {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contacto-dato:hover { color: #fff; }
+
+.dato-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.contacto-right {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 40px;
+}
+
+.contacto-right h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.contacto-right p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+}
+
+.form-row { margin-bottom: 16px; }
+
+.form-row label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus { border-color: var(--dorado); }
+
+.form-row input::placeholder,
+.form-row textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+.form-row select option { background: var(--burdeos-dark); color: #fff; }
+
+.form-row textarea { resize: none; height: 100px; }
+
+.btn-enviar {
+  width: 100%;
+  background: var(--dorado);
+  color: var(--negro);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  transition: opacity 0.2s;
+  margin-top: 8px;
+}
+
+.btn-enviar:hover { opacity: 0.9; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--burdeos-dark);
+  padding: 28px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer p {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: rgba(255,255,255,0.9); }
+
+/* ── ANIMACIONES ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  section { padding: 70px 24px; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 100px 24px 48px; }
+  .hero-right { padding: 0 24px 60px; }
+  .hero-stats { max-width: 100%; }
+  .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
+  .proyectos-grid { grid-template-columns: 1fr 1fr; }
+  .proyecto-card.destacado { grid-column: 1 / -1; grid-template-columns: 1fr; gap: 20px; }
+  .servicios-grid { grid-template-columns: 1fr; gap: 0; }
+  .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .proyectos-grid { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; }
+  .btn-primary, .btn-secondary { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Luz C. Wong</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Marketing Digital · IA Aplicada</span>
+
+    <h1 class="hero-name">
+      Luz C.<br><span>Wong Naranjo</span>
+    </h1>
+
+    <p class="hero-title">
+      Especialista en Marketing Digital que construye con inteligencia artificial. Directora de un ecosistema de 7 proyectos de IA con impacto real. Premio Mejor TFM, UOC.
+    </p>
+
+    <div class="hero-gancho">
+      <p>
+        Construí un sistema de 11 agentes de IA — sin ser ingeniera, sin financiación, desde Getafe.<br><br>
+        <strong>Si yo pude, tú también puedes. Y puedo acompañarte.</strong>
+      </p>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#servicios" class="btn-primary">Ver servicios</a>
+      <a href="#contacto" class="btn-secondary">Hablemos</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-card featured fade-in">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Proyectos de IA diseñados y desarrollados</div>
+      </div>
+      <div class="stat-card fade-in" style="transition-delay:0.1s">
+        <div class="stat-num">11</div>
+        <div class="stat-label">Agentes IA en el motor Jarvis</div>
+      </div>
+      <div class="stat-card fade-in" style="transition-delay:0.15s">
+        <div class="stat-num">1°</div>
+        <div class="stat-label">Premio Mejor TFM UOC</div>
+      </div>
+      <div class="stat-card fade-in" style="transition-delay:0.2s">
+        <div class="stat-num">PI</div>
+        <div class="stat-label">Propiedad intelectual registrada Madrid</div>
+      </div>
+      <div class="stat-card fade-in" style="transition-delay:0.25s">
+        <div class="stat-num">24h</div>
+        <div class="stat-label">Disponible para trabajar con IA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre">
+  <div class="section-label">Sobre mí</div>
+  <h2 class="section-title">Estrategia digital con <em>propósito real</em></h2>
+
+  <div class="sobre-grid">
+    <div class="sobre-text fade-in">
+      <p>
+        Soy especialista en Marketing Digital con Máster por la Universitat Oberta de Catalunya (UOC) — <strong>Premio al Mejor Trabajo de Fin de Máster</strong> — y directora de proyectos digitales con inteligencia artificial aplicada.
+      </p>
+      <p>
+        Mi perfil es estratégico, no técnico. Detecto necesidades, diseño arquitecturas de solución, creo el contenido que las alimenta y las llevo hasta un prototipo funcional. La tecnología es mi herramienta — el problema real de las personas es mi punto de partida.
+      </p>
+
+      <div class="sobre-highlight">
+        <p>"La IA está al alcance de cualquier profesional con estrategia y visión. No hace falta saber programar — hace falta saber qué problema resolver."</p>
+      </div>
+
+      <p>
+        Hoy dirijo <strong>Yoti Refugio</strong>, una plataforma de IA empática camuflada como app de recetas para proteger a mujeres víctimas de violencia de género. Y a través de <strong>SmartAgent Factory</strong> ayudo a pymes y autónomos a automatizar su negocio con IA.
+      </p>
+    </div>
+
+    <div class="sobre-credenciales fade-in" style="transition-delay:0.15s">
+      <div class="credencial">
+        <div class="credencial-icon">🏆</div>
+        <div class="credencial-info">
+          <h4>Premio Mejor TFM · UOC 2022</h4>
+          <p>Plan de marketing digital para Sinequal Artesanía Digital S.L. Metodología mixta: analítica web, encuestas cualitativas y cuantitativas.</p>
+        </div>
+      </div>
+      <div class="credencial">
+        <div class="credencial-icon">🛡️</div>
+        <div class="credencial-info">
+          <h4>Propiedad Intelectual Registrada</h4>
+          <p>PI Ref. 49/189530.9/26 · Registro Territorial Comunidad de Madrid · Mayo 2026</p>
+        </div>
+      </div>
+      <div class="credencial">
+        <div class="credencial-icon">🎓</div>
+        <div class="credencial-info">
+          <h4>Máster en Marketing Digital · UOC</h4>
+          <p>Especialización en estrategia digital, ecommerce, analítica e inteligencia artificial aplicada.</p>
+        </div>
+      </div>
+      <div class="credencial">
+        <div class="credencial-icon">🚀</div>
+        <div class="credencial-info">
+          <h4>SpinUOC DONA 2026 · Santander X Award</h4>
+          <p>Participante seleccionada en SpinUOC DONA 2026 y candidata Santander X Award Startup Universitaria 2026.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="proyectos-bg">
+  <div class="section-label">Ecosistema de proyectos</div>
+  <h2 class="section-title">7 proyectos de IA.<br><em>Todos con problema real detrás.</em></h2>
+
+  <div class="proyectos-grid">
+
+    <div class="proyecto-card destacado fade-in">
+      <div>
+        <div class="proyecto-sector">Proyecto principal · Protección VG</div>
+        <h3 class="proyecto-nombre">Yoti Refugio</h3>
+        <p class="proyecto-desc">
+          Plataforma de IA empática camuflada como app de recetas. 11 agentes trabajan en silencio para proteger a mujeres víctimas de violencia de género. Porque pedir ayuda no siempre se puede hacer en voz alta.
+        </p>
+        <span class="proyecto-pill pill-live">Activo · SpinUOC DONA 2026</span>
+      </div>
+      <div class="proyecto-destacado-right">
+        <p>Motor SafeVoice Engine con arquitectura Jarvis de 11 agentes: Orquestadora, Escucha, Análisis, Alerta, Evidencias, Memoria + 5 agentes externos.</p>
+        <p>Interfaz camuflada como app de recetas. Alerta silenciosa a red de confianza. Trazabilidad cifrada para uso judicial.</p>
+        <span class="pi-ref">PI Ref. 49/189530.9/26 · Registro Comunidad de Madrid</span>
+      </div>
+    </div>
+
+    <div class="proyecto-card fade-in" style="transition-delay:0.05s">
+      <div class="proyecto-sector">Educación · Acoso escolar</div>
+      <h3 class="proyecto-nombre">Yoti Bullying</h3>
+      <p class="proyecto-desc">IA camuflada como calculadora para que menores pidan ayuda ante el acoso escolar de forma silenciosa y segura.</p>
+      <span class="proyecto-pill pill-live">Demo funcional publicada</span>
+    </div>
+
+    <div class="proyecto-card fade-in" style="transition-delay:0.1s">
+      <div class="proyecto-sector">Automoción · Talleres</div>
+      <h3 class="proyecto-nombre">AGAFIX</h3>
+      <p class="proyecto-desc">Sistema inteligente para talleres mecánicos: gestión de clientes, vehículos, estados, alertas de mantenimiento y módulo de informe pericial asistido por IA.</p>
+      <span class="proyecto-pill pill-mvp">MVP diseñado</span>
+    </div>
+
+    <div class="proyecto-card fade-in" style="transition-delay:0.15s">
+      <div class="proyecto-sector">LegalTech · RGPD</div>
+      <h3 class="proyecto-nombre">DataGuardian</h3>
+      <p class="proyecto-desc">Análisis de documentos legales, políticas de privacidad y riesgos de cumplimiento normativo mediante agentes de IA especializados.</p>
+      <span class="proyecto-pill pill-dev">En desarrollo</span>
+    </div>
+
+    <div class="proyecto-card fade-in" style="transition-delay:0.2s">
+      <div class="proyecto-sector">EdTech · Orientación</div>
+      <h3 class="proyecto-nombre">Aula Smart</h3>
+      <p class="proyecto-desc">Panel de orientación académica guiado por IA para acompañar a estudiantes y mejorar su seguimiento formativo. En incubación UOC.</p>
+      <span class="proyecto-pill pill-dev">Incubación UOC</span>
+    </div>
+
+    <div class="proyecto-card fade-in" style="transition-delay:0.25s">
+      <div class="proyecto-sector">Social · Migrantes</div>
+      <h3 class="proyecto-nombre">MigraAI</h3>
+      <p class="proyecto-desc">Asistente con agentes especializados en trámites, empleo, sanidad y ayudas sociales para personas migrantes en España.</p>
+      <span class="proyecto-pill pill-dev">Concepto desarrollado</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="servicios-intro">
+    <div class="section-label">Servicios</div>
+    <h2 class="section-title">Tres formas de <em>trabajar conmigo</em></h2>
+    <p>
+      Tanto si tienes un negocio local que quiere crecer con IA, como si necesitas impulsar tu marca personal o buscas colaboración para un proyecto de impacto — hay un punto de entrada diseñado para ti.
+    </p>
+  </div>
+
+  <div class="servicios-grid">
+
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">01</div>
+      <div class="servicio-icono">🔍</div>
+      <div class="servicio-para">Autónomos · Pymes · Profesionales</div>
+      <h3 class="servicio-nombre">Sesión de Diagnóstico IA</h3>
+      <p class="servicio-desc">
+        Analizamos juntos tu negocio o proyecto en 90 minutos. Identifico qué procesos puedes automatizar, qué agente de IA necesitas y cuál es el camino más corto para generar resultados reales.
+      </p>
+      <div class="servicio-precio">
+        <span class="precio-num">97€</span>
+        <span class="precio-suffix">sesión única · online</span>
+      </div>
+      <ul class="servicio-lista">
+        <li>Diagnóstico de tu situación digital actual</li>
+        <li>Mapa de oportunidades de automatización con IA</li>
+        <li>Recomendación de herramientas y stack tecnológico</li>
+        <li>Plan de acción de 4 semanas entregado por escrito</li>
+        <li>Grabación de la sesión incluida</li>
+      </ul>
+      <a href="#contacto" class="btn-servicio btn-s-main">Reservar sesión</a>
+    </div>
+
+    <div class="servicio-card fade-in" style="transition-delay:0.1s; border-top: 3px solid var(--burdeos);">
+      <div class="servicio-num">02</div>
+      <div class="servicio-icono">⚙️</div>
+      <div class="servicio-para">Negocios locales · Comercios · Salones</div>
+      <h3 class="servicio-nombre">Automatización para tu Negocio</h3>
+      <p class="servicio-desc">
+        Diseño la estrategia completa de automatización para tu negocio local y coordino su implementación con un equipo técnico especializado: citas por WhatsApp, CRM, contenido en redes, fidelización y reporting mensual. Tú te dedicas a tu negocio, el sistema trabaja solo.
+      </p>
+      <div class="servicio-precio">
+        <span class="precio-num">79–299€</span>
+        <span class="precio-suffix">/mes · sin permanencia</span>
+      </div>
+      <ul class="servicio-lista">
+        <li>Chatbot de citas por WhatsApp activo en 2 semanas</li>
+        <li>CRM simple con ficha de cada cliente</li>
+        <li>Contenido para redes generado con IA</li>
+        <li>Reputación en Google (reseñas automáticas)</li>
+        <li>Informe mensual de resultados</li>
+      </ul>
+      <a href="#contacto" class="btn-servicio btn-s-main">Quiero saber más</a>
+    </div>
+
+    <div class="servicio-card fade-in" style="transition-delay:0.2s">
+      <div class="servicio-num">03</div>
+      <div class="servicio-icono">🤝</div>
+      <div class="servicio-para">Inversores · Instituciones · ONGs</div>
+      <h3 class="servicio-nombre">Colaboración e Inversión</h3>
+      <p class="servicio-desc">
+        Si trabajas con proyectos de impacto social o buscas oportunidades en IA aplicada, hablemos sobre Yoti Refugio y el ecosistema YoTeCreo. Seleccionada en SpinUOC DONA 2026 y candidata Santander X Award.
+      </p>
+      <div class="servicio-precio">
+        <span class="precio-num" style="font-size:24px;">Hablemos</span>
+      </div>
+      <ul class="servicio-lista">
+        <li>Yoti Refugio — plataforma de protección VG con IA</li>
+        <li>Yoti Bullying — apoyo a menores ante acoso</li>
+        <li>AGAFIX, DataGuardian, MigraAI, Aula Smart</li>
+        <li>PI registrada · Demos funcionales disponibles</li>
+        <li>Candidata a financiación pública y privada</li>
+      </ul>
+      <a href="#contacto" class="btn-servicio btn-s-outline">Contactar</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto-bg">
+  <div class="contacto-grid">
+    <div class="contacto-left fade-in">
+      <div class="section-label">Contacto</div>
+      <h2 class="section-title">Construyamos<br><em>algo juntos</em></h2>
+      <p>
+        Tanto si tienes un negocio que quieres digitalizar, un proyecto de impacto que impulsar, o simplemente quieres saber si la IA puede ayudarte — el primer paso es una conversación.
+      </p>
+
+      <div class="contacto-datos">
+        <a href="mailto:ayuda@yotirefugio.org" class="contacto-dato">
+          <div class="dato-icon">✉</div>
+          ayuda@yotirefugio.org
+        </a>
+        <a href="https://www.linkedin.com/in/luzwong/" target="_blank" class="contacto-dato">
+          <div class="dato-icon">in</div>
+          linkedin.com/in/luzwong
+        </a>
+        <a href="https://luzcwong.github.io/Yoti_Refugio/" target="_blank" class="contacto-dato">
+          <div class="dato-icon">🌿</div>
+          Yoti Refugio — landing oficial
+        </a>
+        <a href="https://luzcwong.github.io/luzcwongnaranjo-cv/" target="_blank" class="contacto-dato">
+          <div class="dato-icon">📄</div>
+          CV interactivo completo
+        </a>
+      </div>
+    </div>
+
+    <div class="contacto-right fade-in" style="transition-delay:0.15s">
+      <h3>¿En qué puedo ayudarte?</h3>
+      <p>Cuéntame tu situación y te respondo en menos de 24h.</p>
+
+      <form onsubmit="enviarForm(event)">
+        <div class="form-row">
+          <label>Tu nombre</label>
+          <input type="text" placeholder="Nombre y apellidos">
+        </div>
+        <div class="form-row">
+          <label>Email de contacto</label>
+          <input type="email" placeholder="tu@email.com">
+        </div>
+        <div class="form-row">
+          <label>Me interesa</label>
+          <select>
+            <option value="">Selecciona una opción</option>
+            <option>Sesión de diagnóstico IA (97€)</option>
+            <option>Automatización para mi negocio (79–299€/mes)</option>
+            <option>Colaboración o inversión (Yoti Refugio)</option>
+            <option>Otra consulta</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Cuéntame brevemente</label>
+          <textarea placeholder="Qué tienes, qué necesitas, qué quieres conseguir..."></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar mensaje →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p>© 2026 Luz C. Wong Naranjo · Especialista en Marketing Digital & IA Aplicada</p>
+    <p>PI Ref. 49/189530.9/26 · Getafe, Madrid · ayuda@yotirefugio.org</p>
+  </div>
+  <div class="footer-links">
+    <a href="https://luzcwong.github.io/luzcwongnaranjo-cv/" target="_blank">CV</a>
+    <a href="https://luzcwong.github.io/Yoti_Refugio/" target="_blank">Yoti Refugio</a>
+    <a href="https://www.linkedin.com/in/luzwong/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Fade in observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Form submit
+function enviarForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-enviar');
+  btn.textContent = '✓ Mensaje enviado — te escribo pronto';
+  btn.style.background = '#2E7D32';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
